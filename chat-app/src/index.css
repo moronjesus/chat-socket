@@ -1,0 +1,138 @@
+body {
+    font-family: "Helvetica";
+
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  p, h3{
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --primary-text: #050505;
+    --secondary-text: #65676b;
+    --bg-color: #fff;
+  }
+  
+
+  
+  .card-contenido h3,
+  .card-contenido p {
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .name-chat{
+    font-size: 0.90rem;
+  }
+  
+  .card-chat{
+
+    margin-top: 12px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    box-shadow: 0 3px 7px 0 #d2d2d2;
+    padding: 12px;
+    border-left: 4px solid #230f42;
+/*     border-right: 2px solid #230f42; */
+  }
+  
+  
+  /* avatar */
+  
+  .card-avatar{
+    position: relative;
+    display: flex;
+    margin-right: 12px;
+  }
+  
+  .card-avatar img {
+    height: 56px;
+    width: 56px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .border-chat{
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border: 2px solid #311638;
+    border-radius: 50%;
+  
+  }
+  
+  .activo{
+    border: 2px solid #ffffff;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 12px;
+    height: 12px;
+    background-color: #c3f11a;
+    box-shadow: 0 3px 7px 0 #d2d2d2;
+    border-radius: 50%;
+   
+  }
+
+  .inactivo{
+    border: 2px solid #ffffff;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 12px;
+    height: 12px;
+    background-color: #e70707;
+    box-shadow: 0 3px 7px 0 #d2d2d2;
+    border-radius: 50%;
+   
+  }
+  
+  /* contenido del card */
+  .card-contenido{
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    
+  }
+  
+  .card-text{
+    flex: 1;
+    min-width: 0;
+    margin-right: 12px;
+  
+  }
+  
+  .row-chat{
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-indicador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+  }
+  
+  .separador {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  
+  
+  /* icon  */
+  .design-img-icon{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
