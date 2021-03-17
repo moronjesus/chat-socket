@@ -13,20 +13,32 @@ export const Messages = () => {
     return (
 
         <div className="mesgs" >
-            <div className="msg_history" id= "mensaje">
+            <div className="msg_history" id="mensaje">
+
 
                 {
-                    chatState.mensajes.map(msg=>(
+                    (chatState.mensajes.length === 0 )
+                        ?
+                        (<div className="middle-screen">
+                            <div className="alert-warning">
+                                <hr />
+                                <h3>No hay mensajes en este chat</h3>
+                                <span> Escriba un mensaje</span>
+                            </div>
+                        </div>)
 
-                        (msg.to === auth.uid)
-                        ? <IncomingMessage key ={msg._id} msg={msg} />
-                        : <OutgoingMessage key={msg._id} msg={msg} />
-                    ))
+                        : (chatState.mensajes.map(msg => (
+
+                            (msg.to === auth.uid)
+                                ? <IncomingMessage key={msg._id} msg={msg} />
+                                : <OutgoingMessage key={msg._id} msg={msg} />
+                        )))
+
                 }
 
             </div>
 
-           <SendMenssage />
+            <SendMenssage />
 
         </div>
 

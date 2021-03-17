@@ -23,13 +23,13 @@ export const SidebarChatItems = ({ user }) => {
             type: types.cragarMensajes,
             payload: mensajes.mensajeDe.reverse()
         });
+        scrollToBottom('mensaje');
 
-        scrollToBottom('mensaje')
     }
 
     return (
 
-        <div className="card-chat" onClick={onClickUserChat}>
+        <div className="card-chat" tabIndex="0" onClick={onClickUserChat} id={user.uid}>
 
             <div className="card-avatar">
                 <img src="https://ptetutorials.com/images/user-profile.png" alt="no fount" className="design-img"></img>
@@ -52,7 +52,6 @@ export const SidebarChatItems = ({ user }) => {
                     <img src="https://ptetutorials.com/images/user-profile.png" alt="no fount" className="design-img-icon"></img>
                 </div>
             </div>
-
         </div>
 
     )

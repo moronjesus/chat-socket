@@ -9,6 +9,7 @@ const initialState = {
     chatActivo:null,
     usuarios: [],
     mensajes: [],
+    styleActivo:'activo'
 }
 
 
